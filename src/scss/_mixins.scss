@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin link-reset {
+  text-decoration: none;
+  color: $defaultTextColor;
+}
+@mixin brand-grid {
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 72px;
+  gap: 32px;
+}
+@mixin equipment-grid {
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 160px;
+  gap: 32px;
+}
+@mixin button-more {
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+@mixin button-grid {
+  display: flex;
+  justify-content: flex-start;
+  grid-column: 1;
+}
+@mixin element-go {
+  width: 40px;
+  height: 40px;
+  border: 2px solid $accentColor;
+  border-radius: 50%;
+}
+@mixin h2_title {
+  color: $defaultTextcolor2;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 40px;
+}

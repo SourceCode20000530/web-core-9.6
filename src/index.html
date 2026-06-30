@@ -1,16 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-core 9.6</title>
   </head>
   <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 5 starter </h3>
+    <header id="header">
+      <div class="header__left-part">
+        <button class="header__menu standard-button" id="menuBurgerBtn">
+          <img src="img/icons/ic-menu.svg" alt="Menu icon" />
+        </button>
+        <div
+          class="header__left-part__separator tablet-screen-elements separator"
+        ></div>
+        <div class="header__left-part__logo"
+          ><img src="img/logos/logo.svg" alt="Logo icon"
+        /></div>
+      </div>
+      <div class="header__right-part">
+        <button class="call-element tablet-screen-elements standard-button"
+          ><img src="img/icons/ic-call.svg" alt="Phone icon"
+        /></button>
+        <button class="chat-element tablet-screen-elements standard-button"
+          ><img src="img/icons/ic-chat.svg" alt="Chat icon"
+        /></button>
+        <button class="profile-element tablet-screen-elements standard-button"
+          ><img src="img/icons/ic-profile.svg" alt="Profile icon"
+        /></button>
+        <div class="separator"></div>
+        <button class="repair-element standard-button"
+          ><img src="img/icons/ic-repair.svg" alt="Repair icon"
+        /></button>
+        <button class="status-element standard-button"
+          ><img src="img/icons/ic-status.svg" alt="Status icon"
+        /></button>
+      </div>
+    </header>
+    <section>
+      <aside class="menu" id="menu">
+        <div class="menu__backdrop"></div>
+        <div class="menu__content">
+          <div class="menu__nav-header">
+            <div class="menu-container__nav-header__left-part">
+              <div class="close-element standard-button" id="menuCloseBtn"
+                ><img src="img/icons/ic-close.svg" alt="Close element"
+              /></div>
+              <div class="logo-element"
+                ><img src="img/logos/logo.svg" alt="Logo icon"
+              /></div>
+            </div>
+
+            <div class="search-element standard-button"
+              ><img src="img/icons/ic-search.svg" alt="Search icon"
+            /></div>
+          </div>
+          <nav class="menu-container">
+            <div class="menu-container__nav-main">
+              <ul class="menu-container__nav-main__list">
+                <li><a href="#">Ремонт техники</a></li>
+                <li><a href="#">Услуги и сервисы</a></li>
+                <li><a href="#">Корпоративным клиентам</a></li>
+                <li><a href="#">Продавцам техники</a></li>
+                <li><a href="#">Партнерам</a></li>
+                <li><a href="#">Производителям</a></li>
+                <li><a href="#">Наши сервисные центры</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="menu-container__nav-contact">
+              <ul class="menu-container__nav-contact__list">
+                <li
+                  ><a href="#" class="standard-button"
+                    ><img src="img/icons/ic-call.svg" alt="Call icon" /></a
+                ></li>
+                <li
+                  ><a href="#" class="standard-button"
+                    ><img src="img/icons/ic-chat.svg" alt="Chat icon" /></a
+                ></li>
+                <li
+                  ><a href="#" class="standard-button"
+                    ><img
+                      src="img/icons/ic-profile.svg"
+                      alt="Profile icon" /></a
+                ></li>
+              </ul>
+              <a
+                href="mailto:mail@cps.com"
+                class="menu-container__nav-contact__email"
+                >mail@cps.com</a
+              >
+              <a
+                href="tel:8 800 890 8900"
+                class="menu-container__nav-contact__phone-number"
+                >8 800 890 8900</a
+              >
+            </div>
+            <div class="menu-container__nav-lang">
+              <ul class="menu-container__nav-lang__list">
+                <li><a href="#">RU</a></li>
+                <li><a href="#">EN</a></li>
+                <li><a href="#">CH</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <main>
+        <div class="main-title">
+          <h1>Услуги и сервисы</h1>
+          <div class="main-title__switch-part">
+            <div class="main-title__repair-element standard-container">
+              Оставить заявку
+              <button
+                class="main-title__repair-element__repair-button standard-button"
+                ><img
+                  src="img/icons/ic-repair.svg"
+                  alt="Repair icon"
+                  class="main-title__repair-element__repair-button__image standard-image"
+              /></button>
+            </div>
+            <div class="main-title__status-element standard-container">
+              Статус ремонта
+              <button
+                class="main-title__status-element__status-button standard-button"
+                ><img
+                  src="img/icons/ic-status.svg"
+                  alt="Status icon"
+                  class="main-title__status-element__status-button__image standard-image"
+              /></button>
+            </div>
+          </div>
+        </div>
+        <nav class="services">
+          <ul class="services__list">
+            <li><a href="#">Ремонтируемые бренды</a></li>
+            <li><a href="#">Дополнительные услуги</a></li>
+            <li><a href="#">Цены на услуги</a></li>
+            <li><a href="#">Адреса сервисных центров</a></li>
+            <li><a href="#">Специальные цены</a></li>
+            <li><a href="#">Отзывы</a></li>
+          </ul>
+        </nav>
+        <section class="main-content">
+          <div class="main-content__text-content">
+            <div class="main-content__text-content__text">
+              <p class="main-content__text-content__text__p1"
+                >Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.</p
+              ><br />
+              <p
+                class="main-content__text-content__text__p2"
+                id="main-content__text__p2"
+              >
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                партнера,<span
+                  class="main-content__text-content__text__p2__span"
+                  id="main-content__text__p2__span"
+                >
+                  что подтверждает большое количество постоянных клиентов. Мы
+                  гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                  очередь, советуют нас родным и близким.</span
+                ></p
+              >
+              <p
+                class="main-content__text-content__text__p3"
+                id="main-content__text__p3"
+              >
+                <br />Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Unde possimus necessitatibus, laborum debitis officia hic sit
+                quo illo, facilis rerum officiis aut voluptatem laudantium
+                nesciunt ipsum! Qui ad iste culpa.
+              </p>
+            </div>
+            <button
+              class="main-content__text-content__text__button button-more"
+              id="main-content__button-more"
+              ><div class="main-content__text-content__text__button__image"
+                ><img src="img/icons/ic-more.svg" alt="Read more icon" /></div
+              ><span
+                class="main-content__text-content__text__button__text"
+                id="main-content__button-more__text"
+                >Читать далее</span
+              ></button
+            >
+          </div>
+          <div class="main-content__image-content">
+            <img src="img/backgrounds/main.png" alt="" />
+          </div>
+        </section>
+        <section class="brands-repair">
+          <h2 class="brands-repair__title h2-title"
+            >Ремонт техники различных брендов</h2
+          >
+          <div class="brands-repair__brands">
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-lenovo.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-samsung.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-apple.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-view-sonic.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-bosch.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-hp.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-acer.svg" alt="Lenovo brand" />
+              </div>
+              <div class="brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <div class="brands-repair__brands__brand">
+              <div class="brands-repair__brands__brand__logo">
+                <img src="img/brands/brand-sony.svg" alt="Lenovo brand" />
+              </div>
+              <div class="swiper-slide brands-repair__brands__brand__go">
+                <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+              </div>
+            </div>
+            <button
+              class="brands-repair__brands__brand__button button-more"
+              id="brands__button-more"
+              ><div class="brands-repair__brands__brand__button__image"
+                ><img src="img/icons/ic-more.svg" alt="Show more" /></div
+              ><span class="brands-repair__brands__brand__button__text"
+                >Показать все</span
+              ></button
+            >
+          </div>
+        </section>
+        <section class="equipments-repair">
+          <h2 class="equipments-repair__title h2-title"
+            >Ремонт различных видов техники</h2
+          >
+          <div class="equipments-repair__equipments">
+            <div class="equipments-repair__equipments__equipment">
+              <div class="equipments-repair__equipments__equipment__title">
+                <h3 class="equipments-repair__equipments__equipment__title__h3">
+                  Ремонт ноутбуков
+                </h3>
+              </div>
+              <div class="equipments-repair__equipments__equipment__bottom">
+                <div
+                  class="equipments-repair__equipments__equipment__bottom__go"
+                >
+                  <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+                </div>
+              </div>
+            </div>
+            <div class="equipments-repair__equipments__equipment">
+              <div class="equipments-repair__equipments__equipment__title">
+                <h3 class="equipments-repair__equipments__equipment__title__h3">
+                  Ремонт планшетов
+                </h3>
+              </div>
+              <div class="equipments-repair__equipments__equipment__bottom">
+                <div
+                  class="equipments-repair__equipments__equipment__bottom__go"
+                >
+                  <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+                </div>
+              </div>
+            </div>
+            <div class="equipments-repair__equipments__equipment">
+              <div class="equipments-repair__equipments__equipment__title">
+                <h3 class="equipments-repair__equipments__equipment__title__h3">
+                  Ремонт ПК
+                </h3>
+              </div>
+              <div class="equipments-repair__equipments__equipment__bottom">
+                <div
+                  class="equipments-repair__equipments__equipment__bottom__go"
+                >
+                  <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+                </div>
+              </div>
+            </div>
+            <div class="equipments-repair__equipments__equipment">
+              <div class="equipments-repair__equipments__equipment__title">
+                <h3 class="equipments-repair__equipments__equipment__title__h3">
+                  Ремонт мониторов
+                </h3>
+              </div>
+              <div class="equipments-repair__equipments__equipment__bottom">
+                <div
+                  class="equipments-repair__equipments__equipment__bottom__go"
+                >
+                  <img src="img/icons/ic-pink-go.svg" alt="Brand Go" />
+                </div>
+              </div>
+            </div>
+            <button
+              class="equipments-repair__equipments__equipment__button button-more"
+              id="equipments__button-more"
+              ><div class="equipments-repair__equipments__equipment__button__image"><img src="img/icons/ic-more.svg" alt="Show more" /></div><span
+                class="equipments-repair__equipments__equipment__button__text"
+                >Показать все</span
+              ></button
+            >
+          </div>
+        </section>
+        <section class="price">
+          <h2 class="price__title h2-title">Цены на услуги</h2>
+          <div class="price__table-container">
+            <table class="price__table-container__table">
+              <thead class="price__table-container__table__header">
+                <tr>
+                  <th>Ремонтные услуги</th>
+                  <th>Цена</th>
+                  <th>Срок</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody class="price__table-container__table__body">
+                <tr>
+                  <td>Диагностика</td>
+                  <td>Бесплатно</td>
+                  <td>30 мин</td>
+                  <td class="price__table-container__table__body__button-order"
+                    ><button
+                      class="price__table-container__table__body__tr__td__button"
+                      >Заказать<img
+                        src="img/icons/ic-white-go.svg"
+                        alt="Order icon" /></button
+                  ></td>
+                </tr>
+                <tr>
+                  <td>Замена дисплея</td>
+                  <td>1 000 ₽</td>
+                  <td>30-120 мин</td>
+                  <td class="price__table-container__table__body__button-order"
+                    ><button
+                      class="price__table-container__table__body__tr__td__button"
+                      >Заказать<img
+                        src="img/icons/ic-white-go.svg"
+                        alt="Order icon" /></button
+                  ></td>
+                </tr>
+                <tr>
+                  <td>Замена полифонического динамика</td>
+                  <td>1 000 ₽</td>
+                  <td>30-120 мин</td>
+                  <td class="price__table-container__table__body__button-order"
+                    ><button
+                      class="price__table-container__table__body__tr__td__button"
+                      >Заказать<img
+                        src="img/icons/ic-white-go.svg"
+                        alt="Order icon" /></button
+                  ></td>
+                </tr>
+                <tr>
+                  <td>Тестирование с выдачей технического заключения</td>
+                  <td>1 000 ₽</td>
+                  <td>30-120 мин</td>
+                  <td class="price__table-container__table__body__button-order"
+                    ><button
+                      class="price__table-container__table__body__tr__td__button"
+                      >Заказать<img
+                        src="img/icons/ic-white-go.svg"
+                        alt="Order icon" /></button
+                  ></td>
+                </tr>
+                <tr>
+                  <td>Замена программного обеспечения</td>
+                  <td>1 000 ₽</td>
+                  <td>30-120 мин</td>
+                  <td class="price__table-container__table__body__button-order"
+                    ><button
+                      class="price__table-container__table__body__tr__td__button"
+                      >Заказать<img
+                        src="img/icons/ic-white-go.svg"
+                        alt="Order icon" /></button
+                  ></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="price__info">
+            <p class="price__info__vat"
+              >Все цены указаны с учетом НДС. Стоимость ремонта указана на
+              единичную услугу. Для получения коммерческого предложения на
+              постоянное обслуживание, оставьте заявку.</p
+            >
+            <a href="#" class="price__info__get-commercial-offer"
+              >Получить коммерческое предложение<img
+                src="img/icons/ic-pink-go.svg"
+                alt="Get commercial offer icon"
+            /></a>
+          </div>
+        </section>
+        <footer class="footer">
+          <p class="footer__copyright-info footer-text"
+            >© 2019 CPS<br />Разработано командой Apesong
+          </p>
+          <p class="footer__privacy-policy-info footer-text"
+            >Политика конфиденциальности</p
+          >
+          <p class="footer__warning-info footer-text"
+            >Информация, размещенная на данной странице, не является публичной
+            офертой</p
+          >
+        </footer>
+      </main>
+    </section>
   </body>
 </html>

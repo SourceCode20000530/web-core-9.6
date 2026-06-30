@@ -1,3 +1,5 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
 
-console.log('It works!')
+import * as swiperConnect from './swiper-connect';
+import * as menu from './menu';
+import * as mainContentShowMore from './main-content-show-more';
